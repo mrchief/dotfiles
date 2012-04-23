@@ -1,0 +1,15 @@
+
+[user]
+	name = mrchief
+	email = mrchief_2000@yahoo.com
+[merge]
+	tool = WinMerge
+[mergetool "WinMerge"]
+	path = \"C:/Program Files (x86)/WinMerge/WinMergeU.exe\" %theirs %mine %merged
+[diff]
+	guitool = WinMerge
+[difftool "WinMerge"]
+	path = \"C:/Program Files (x86)/WinMerge/WinMergeU.exe\" -s -e -x -ul -ur -wl -dl %bname -dr %yname %base %mine
+[core]
+	editor = \"C:/Program Files (x86)/Notepad++/notepad++.exe\" fileeditor
+	autocrlf = true
