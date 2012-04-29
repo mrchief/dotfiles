@@ -1,0 +1,1 @@
+xcopy vlcrc %appdata%\vlc\
