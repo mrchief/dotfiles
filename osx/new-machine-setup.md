@@ -62,6 +62,12 @@ $ curl -L https://get.oh-my.fish | fish
 
 # install powerline theme status: https://github.com/oh-my-fish/theme-bobthefish
 omf install bobthefish
+
+# add to shells
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+
+# make fish the default shell
+chsh -s /usr/local/bin/fish
 ```
 
 ## Apps and Utils
@@ -83,6 +89,14 @@ $ brew install git
 
  - Download and install latest from https://www.sublimetext.com/3
  - [Optional] Apply patch from: https://gist.github.com/laptrinhcomvn/ae127424a9026f507a3c
+ 
+```bash
+# OS X Command Line
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+ 
+# To use Sublime Text as the editor for many commands that prompt for input, set your EDITOR environment variable:
+export EDITOR='subl -w'
+```
  
 ### iTerm2
 
