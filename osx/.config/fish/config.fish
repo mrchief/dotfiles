@@ -1,13 +1,9 @@
 
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias la="ls -Gla"
+alias md=mkdir
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
-alias ll='ls -ahlF'
 alias l='ls -CF'
 
 # docker stuff
@@ -52,3 +48,10 @@ alias dl "docker ps -l -q"
 if test -f ./.nvmrc
     nvm use
 end 
+
+# n stuff
+set -x N_PREFIX $HOME/n
+
+if not contains -- $N_PREFIX/bin $PATH
+  set PATH $PATH $N_PREFIX/bin
+end
